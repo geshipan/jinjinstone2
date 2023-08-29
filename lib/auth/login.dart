@@ -22,6 +22,11 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -47,10 +52,8 @@ class _LoginState extends State<Login> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Signup(email: '')));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Signup()));
               },
               child: const Text('회원 가입'),
             ),
